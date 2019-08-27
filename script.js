@@ -13,8 +13,8 @@ function start() {
     allStudents.forEach(student => {
       dest.innerHTML += `
               <div class="student">
-                  <h1>${student.fullname}</h1>
-                  <h2>${student.house}</h2>
+                  <h2>${student.fullname}</h2>
+                  <h3>${student.house}</h3
               </div>
 `;
     });
