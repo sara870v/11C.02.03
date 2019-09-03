@@ -8,6 +8,7 @@ let housecontent = document.querySelector(".housedropdown");
 housebtn.addEventListener("click", dropHouse);
 
 function dropHouse() {
+  // display the content of different houses
   housecontent.classList.toggle("show");
 }
 let house = "All";
@@ -15,6 +16,7 @@ let house = "All";
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
+  // Fetch Json data and let it await, and create div with list
   let dest = document.querySelector("#list");
   async function getJson() {
     let jsonData = await fetch("http://petlatkea.dk/2019/students1991.json");
@@ -23,6 +25,8 @@ function start() {
   }
 
   function showStudent() {
+    // Make sure it starts empty, and afterwards shows students with "all" houses,
+    //and each students fullname and house
     dest.innerHTML = "";
     allStudents.forEach(student => {
       if (house == "All" || house == student.house) {
@@ -40,6 +44,7 @@ function start() {
   });
 
   function showHouse() {
+    // show what house is specific to the content you filter
     house = this.textContent;
 
     showStudent();
