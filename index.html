@@ -3,17 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Hogwarts Students 1991</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
     <header>
       <H1>Studentlist</H1>
-      <!-- <h2>hej</h2> -->
     </header>
-    <div id="list"></div>
 
+    <div class="housefilter">
+      <button class="housebtn">
+        FILTER BY HOUSE<i class="fa fa-angle-down"></i>
+      </button>
+      <div class="housedropdown">
+        <button class="filter">All</button>
+        <button class="filter">Gryffindor</button>
+        <button class="filter">Slytherin</button>
+        <button class="filter">Ravenclaw</button>
+        <button class="filter">Hufflepuff</button>
+      </div>
+    </div>
+    <div id="list"></div>
     <script src="script.js"></script>
   </body>
 </html>

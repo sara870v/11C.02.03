@@ -1,4 +1,17 @@
+"use strict";
+
 let allStudents = [];
+
+let housebtn = document.querySelector(".housebtn");
+let housecontent = document.querySelector(".housedropdown");
+
+housebtn.addEventListener("click", dropHouse);
+
+function dropHouse() {
+  housecontent.classList.toggle("show");
+}
+let house = "All";
+
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
@@ -10,14 +23,27 @@ function start() {
   }
 
   function showStudent() {
+    dest.innerHTML = "";
     allStudents.forEach(student => {
-      dest.innerHTML += `
+      if (house == "All" || house == student.house) {
+        dest.innerHTML += `
               <div class="student">
                   <h2>${student.fullname}</h2>
                   <h3>${student.house}</h3
-              </div>
-`;
+              </div>`;
+      }
     });
   }
+
+  document.querySelectorAll(".filter").forEach(elm => {
+    elm.addEventListener("click", showHouse);
+  });
+
+  function showHouse() {
+    house = this.textContent;
+
+    showStudent();
+  }
+
   getJson();
 }
