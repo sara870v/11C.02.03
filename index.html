@@ -12,14 +12,24 @@
   </head>
 
   <body>
+    <div id="popup">
+      <div id="luk"><button>X</button></div>
+      <div id="indhold"></div>
+    </div>
+
     <header>
       <H1>Studentlist</H1>
     </header>
     <div class="sortby">
-      <button class="">FIRST NAME</button>
-      <button class="">LAST NAME</button>
-      <button class="">HOUSE</button>
+      <button class="sortbtn">SORT<i class="fa fa-angle-down"></i></button>
+      <div class="sortdropdown">
+        <button class="filter">ALL</button>
+        <button class="filter">FIRST NAME</button>
+        <button class="filter">LAST NAME</button>
+        <button class="filter">HOUSE</button>
+      </div>
     </div>
+
     <div class="housefilter">
       <button class="housebtn">
         FILTER BY HOUSE<i class="fa fa-angle-down"></i>
